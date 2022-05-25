@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://kit.fontawesome.com/53debf4e9a.js" crossorigin="anonymous"></script>
+
+    <style>
+
+        body{
+            margin:0;
+        }
+
+        #navbar {
+            background-color: #333;
+            position:fixed;
+            width: 100%;
+            top:-80px;
+            transition:top 0.5s;
+        }
+            #navbar a {
+                display: block;
+                float: left;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                text-decoration: none;
+            }
+
+        #navbar a:hover{
+
+            background-color:#ff0000;
+            color:yellow;
+
+
+        }
+       
+    </style>
+
+
+</head>
+<body>
+
+    
+    <div id="navbar">
+
+        <a href="#">Anasayfa</a>
+        <a href="#">Hakkımızda</a>
+        <a href="#">İletişim</a>
+        <a href="#">Kayıt Ol</a>
+
+
+    </div>
+
+
+    <div style="font-size:80px;padding-top:80px;">
+
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+       
+    </div>
+
+
+    <script>
+
+        window.onscroll = function () {
+
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+
+                document.getElementById("navbar").style.top = "0";
+
+            }
+            else {
+                document.getElementById("navbar").style.top = "-80px";
+            }
+        };
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

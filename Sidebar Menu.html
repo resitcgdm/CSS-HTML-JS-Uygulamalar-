@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+
+    <title></title>
+    <script src="https://kit.fontawesome.com/53debf4e9a.js" crossorigin="anonymous"></script>
+
+    <style>
+        .icon-bar {
+            display: inline-block;
+            background-color: #666;
+            border-radius: 10px;
+            margin-top: 10px;
+            position: relative;
+            left: -300px;
+            transition: all 0.5s ease-in;
+        }
+
+            .icon-bar a {
+                display: block;
+                text-align: left;
+                padding: 10px;
+                color: aquamarine;
+                font-size: 30px;
+                transition: all ease-in 0.5s;
+                height: 30px;
+            }
+
+                .icon-bar a:hover {
+                    background-color: black;
+                }
+
+        .active {
+            background-color: green;
+        }
+
+
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 3px;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+
+        .container {
+            cursor: pointer;
+            display: inline-block;
+            float: left;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .change .bar1 {
+            transform: rotate(-45deg) translate(-10px,1px); /* translate x ve y değerleri ile hareket etmeyi saglar*/
+        }
+
+        .change .bar2 {
+            opacity: 0;
+            transition: 0.1s;
+        }
+
+        .change .bar3 {
+            transform: rotate(45deg) translate(-10px,-2px);
+        }
+
+        .open {
+            left: 0;
+            transition: all 0.5s ease-in;
+        }
+
+        .white {
+            background-color: white;
+        }
+
+        .move {
+            left: 200px;
+            top: 15px;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body style="margin:0;">
+    <div id="outer">
+        <div id="test" class="container" onclick="ruN(this)">
+            <!-- bu dive tıkladıgında run isimli parametreli fonksiyonu calıstır diyoruz neye tıkladıysak bu this container classına eşit olmuş olacak yani-->
+            <!-- üc cizgi olusturduk-->
+            <div class="bar1 deneme"></div>
+            <div class="bar2 deneme"></div>
+            <div class="bar3 deneme"></div>
+
+
+
+
+        </div>
+
+
+        <div class="icon-bar" id="menuOpen">
+
+             <a id="a" style="background-color:red;" onclick="run(this)" class=" " href="#"></a>
+
+            <a id="a1" class="active" href="#"><i class="fa-solid fa-house-chimney"> Anasayfa</i></a>
+            <a id="a2"  href="#"><i class="fa-solid fa-magnifying-glass">Ara</i></a>
+            <a id="a3" onclick="run(this)" class=" " href="#"><i class="fa-solid fa-envelope"> İletişim</i></a>
+            <a id="a4" onclick="run(this)" class=" " href="#"><i class="fa-solid fa-globe"> Dil</i></a>
+            <a id="a5" onclick="run(this)" class=" " href="#"><i class="fa-solid fa-trash-can"> Çöp</i></a>
+
+
+
+
+
+        </div>
+    </div>
+    <script>
+
+
+        function run(y) {
+
+            y.classList.toggle("active");
+            
+        }
+
+
+
+
+    
+
+
+
+
+        function ruN(x) {  //x parametresi divi mize eşit oluyor
+
+            x.classList.toggle("change");  // classList divimizin icindeki  var olan classların liste hali,toggle varsa cıkar yoksa ekle özelliğimizdir yani tıkladıgımızda change classını alıcak tekrar tıkladıgımızda change classı varsa bu sefer silicek eski haline dönücek.
+            document.getElementById("menuOpen").classList.toggle("open");
+            document.getElementById("test").classList.toggle("move");
+            var a = document.getElementsByClassName("deneme");
+
+            for (i = 0; i < a.length; i++) {
+                a[i].classList.toggle("white"); //a[i] yapmamızın sebebi ByClassName den gelen class değeri array olarak döner bize
+
+            }
+
+
+
+        }
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html >

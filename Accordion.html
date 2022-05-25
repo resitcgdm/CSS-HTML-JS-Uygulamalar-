@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://kit.fontawesome.com/53debf4e9a.js" crossorigin="anonymous"></script>
+
+    <style>
+        .accordion {
+            background-color:#eee;
+            color:#444;
+            cursor:pointer;
+            width:100%;
+            text-align:left;
+            padding:20px;
+            border:none;
+            outline:none;
+        }
+
+        .active,.accordion:hover {
+            
+            background-color:#ccc;
+
+        }
+
+        .panel {
+
+            padding:10px 20px;
+            display:none;
+
+        }
+        .accordion:after {
+            content:"\02795";
+            float:right;
+        }
+        .active:after {
+            content:"\2796";
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <button class="accordion">Bölüm 1</button>
+
+    <div class="panel">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <button class="accordion">Bölüm 2</button>
+
+    <div class="panel">
+      # Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      #Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      #  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      # It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      # It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      # and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <button class="accordion">Bölüm 3</button>
+
+    <div class="panel">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+
+
+    <script>
+
+        var a = document.getElementsByClassName("accordion");
+
+
+        for (i = 0; i < a.length; i++) {
+
+            a[i].addEventListener("click", function () {
+
+
+                this.classList.toggle("active");
+
+                var b = this.nextElementSibling; //tıkladıgımız butonun siblingini yani kardeşini seçiyoruz
+
+                if (b.style.display === "block") {
+
+                    b.style.display = "none";
+                }
+                else  {
+                    b.style.display = "block";
+                }
+
+            });
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

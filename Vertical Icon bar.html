@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://kit.fontawesome.com/53debf4e9a.js" crossorigin="anonymous"></script>
+    <title>Uygulama 01 || Vertical Icon Bar</title>
+
+    <style>
+        .icon-bar {
+            width: 40px;
+            background-color: #666;
+            border-radius: 10px;
+            overflow:auto;
+            
+        }
+            .icon-bar a {
+                display: block;
+                text-align: center;
+                padding: 10px;
+                color: aquamarine;
+                font-size: 30px;
+                transition: all ease-in 0.5s;
+               
+            }
+            .icon-bar a:hover {
+               background-color:black;
+            }
+
+            .active{
+                background-color:green;
+            }
+
+    </style>
+
+    
+
+</head>
+<body>
+
+
+    <div class="icon-bar">
+
+        <a id="a1" class="active" href="#"><i class="fa-solid fa-house-chimney"></i></a>
+        <a id="a2" onclick="run(this)" class=" " href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a id="a3" onclick="run(this)" class=" " href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a id="a4" onclick="run(this)" class=" " href="#"><i class="fa-solid fa-globe"></i></a>
+        <a id="a5" onclick="run(this)" class=" " href="#"><i class="fa-solid fa-trash-can"></i></a>
+        
+
+
+
+
+    </div>
+
+    <script>
+
+
+        function run(x) {
+
+            x.classList.toggle("active");
+        }
+
+      
+
+
+        //var a = document.getElementsByTagName("a");
+
+        //for (i = 0; i < a.length; i++) {
+
+        //    a[i].addEventListener("click", classdegis);
+        //}
+
+
+
+        //function classdegis() {
+
+        //    document.querySelectorAll("a").className = "active";
+
+        //}
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
